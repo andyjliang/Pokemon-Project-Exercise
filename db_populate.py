@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from db_setup.py import Base, Trainer, PokeBank, Pokemon, Item
+from db_setup import Base, Trainer, PokeBank, Pokemon, Item
 
 engine = create_engine('sqlite:///pokemon.db')
 Base.metadata.bind = engine
@@ -16,7 +16,7 @@ pokemon4 = Pokemon(name="Bulbasaur")
 pokemon5 = Pokemon(name="Pidgeotto")
 pokemon6 = Pokemon(name="Butterfree")
 box1 = PokeBank(name="Box1")
-item = Pokemon(name="Everstone")
+item1 = Item(name="Everstone")
 
 session.add(trainer1)
 session.add(pokemon1)
